@@ -4,8 +4,9 @@
   "description": "A boilerplate for a NextJS app with Rserve backend.",
   "private": true,
   "scripts": {
-    "dev": "next dev",
+    "dev": "npm run server && next dev",
     "build": "next build",
+    "prestart": "npm run server",
     "start": "next start",
     "lint": "next lint",
     "server": "Rscript server/start.R"
