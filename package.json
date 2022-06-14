@@ -1,22 +1,33 @@
 {
   "name": "next-rserve",
   "version": "0.1.0",
+  "description": "A boilerplate for a NextJS app with Rserve backend.",
   "private": true,
   "scripts": {
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "next lint",
+    "server": "Rscript server/start.R"
   },
   "dependencies": {
+    "bluebird": "^3.7.2",
+    "net": "^1.0.2",
     "next": "12.1.6",
+    "next-redux-wrapper": "^7.0.5",
     "react": "18.1.0",
-    "react-dom": "18.1.0"
+    "react-dom": "18.1.0",
+    "react-redux": "^8.0.2",
+    "redux": "^4.2.0",
+    "redux-thunk": "^2.4.1",
+    "rserve": "file:lib/rserve-js"
   },
   "devDependencies": {
+    "@types/next-redux-wrapper": "^3.0.0",
     "@types/node": "17.0.41",
     "@types/react": "18.0.12",
     "@types/react-dom": "18.0.5",
+    "@types/react-redux": "^7.1.24",
     "eslint": "8.17.0",
     "eslint-config-next": "12.1.6",
     "typescript": "4.7.3"
