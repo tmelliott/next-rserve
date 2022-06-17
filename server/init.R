@@ -14,7 +14,15 @@ wrap.r.fun <- Rserve:::ocap
 give.first.functions <- function()
 {
     list(
-        rversion = wrap.r.fun(function() getRversion() |> as.character())
+        rversion = wrap.r.fun(function() getRversion() |> as.character()),
+        load_data = wrap.r.fun(function(url) {
+          data <- iNZightTools::smart_read(url)
+
+          list(
+            variables = wrap.r.fun(function() names(data)),
+            get_data = wrap.r.fun(function() data)
+          )
+        })
     )
 }
 

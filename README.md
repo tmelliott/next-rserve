@@ -5,7 +5,7 @@ This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next
 First, run the development server (**this will kill any running Rserve instances**):
 
 ```bash
-npm run dev
+# npm run dev   # <---- doesn't work with current Rserve
 # or
 yarn dev
 ```
